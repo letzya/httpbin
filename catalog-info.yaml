@@ -1,10 +1,12 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: API
 metadata:
   name: httpbin
   annotations:
     github.com/project-slug: letzya/httpbin
 spec:
-  type: other
-  lifecycle: unknown
+  type: openapi
+  lifecycle: production
   owner: guests
+  definition:
+    $text: https://raw.githubusercontent.com/letzya/httpbin/main/openapi.yaml
